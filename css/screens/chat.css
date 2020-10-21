@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #c7c7c7;
-  height: 500vh;
+  height: 100vh;
 }
 #chat-screen .status-bar {
   z-index: 2;
