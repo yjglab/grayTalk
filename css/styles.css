@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+@import "reset.css";
+@import "variables.css";
+
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+@import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
+/* Screens */
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  color: #2e363e;
+  font-weight: 500;
+}
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}
+#splash-screen {
+  background-color: var(--yjgGreen);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 132px;
+  animation: hideSplashScreen 1s ease-in-out forwards;
+  animation-delay: 3.5s;
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /* visibility -> 해당 속성이 적용된 태그는 마우스에 걸리지 않게함.
+    단, html 자체는 없앨 수 없음. */
+  }
+}
+
+#splash-screen i {
+  color: white;
+  animation: splash-screen-title__anim 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+@keyframes splash-screen-title__anim {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateY(-55px) scale(0.4);
+  }
+}
+
+.splash-screen__text {
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  font-weight: 500;
+  animation: splash-screen-text__anim 1s ease-in-out forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+@keyframes splash-screen-text__anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

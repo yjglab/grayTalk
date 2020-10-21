@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to grayTalk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>Safari</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <header class="welcome-header">
+      <i class="fas fa-comment-alt"></i>
+      <h1 class="welcome-header__title">grayTalk</h1>
+      <p class="welcome-header__text">
+        If you have a grayTalk Account,<br />log in with your E-mail.
+      </p>
+    </header>
+    <form action="friends.html" method="get" id="login-form">
+      <input
+        name="username"
+        type="email"
+        required
+        placeholder="Email or phone number"
+      />
+      <input name="password" type="password" required placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <a href="#">Make grayTalk Account!</a>
+    </form>
+    <div id="splash-screen">
+      <i class="fas fa-comment-alt"></i>
+      <h1 class="splash-screen__text">grayTalk</h1>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
