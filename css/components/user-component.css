@@ -13,6 +13,11 @@
   height: 70px;
   border-radius: 30px;
   margin-right: 20px;
+  cursor: pointer;
+  transition: 0.25s linear;
+}
+.user-component__avatar:hover {
+  transform: scale(1.15);
 }
 .user-component__title {
   font-size: 22px;
@@ -40,6 +45,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+.user-component__column span {
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+.user-component__column span:hover {
+  font-size: 18px;
 }
 .user-component__time {
   display: block;

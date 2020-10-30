@@ -39,7 +39,7 @@ body {
   align-items: center;
   font-size: 132px;
   animation: hideSplashScreen 1s ease-in-out forwards;
-  animation-delay: 3.5s;
+  /* animation-delay: 3.5s; */
 }
 
 @keyframes hideSplashScreen {

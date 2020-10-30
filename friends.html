@@ -14,16 +14,13 @@
   <body>
     <div class="status-bar">
       <div class="status-bar__column">
-        <span>Safari</span>
-        <i class="fas fa-wifi"></i>
+        <span></span>
       </div>
       <div class="status-bar__column">
-        <span>18:43</span>
+        <span></span>
       </div>
       <div class="status-bar__column">
-        <span>100%</span>
-        <i class="fas fa-battery-full fa-lg"></i>
-        <i class="fas fa-bolt"></i>
+        <span></span>
       </div>
     </div>
 
@@ -31,11 +28,12 @@
       <h1 class="screen-header__title">Friends</h1>
       <div class="screen-header__icons">
         <span><i class="fas fa-search fa-lg"></i></span>
-        <span><i class="fas fa-comment-alt fa-lg"></i></span>
         <span
-          ><a href="https://www.apple.com/kr/apple-music/"
-            ><i class="fas fa-music fa-lg"></i></a
+          ><a href="chats.html"><i class="fas fa-comment-alt fa-lg"></i></a
         ></span>
+        <span>
+          <i class="fas fa-music fa-lg"></i>
+        </span>
         <span
           ><a href="settings.html"><i class="fas fa-cog fa-lg"></i></a
         ></span>
@@ -44,7 +42,7 @@
 
     <a href="#" id="friends-display-link">
       <i class="fas fa-info-circle"></i>
-      Friends' Names Display
+      Friends' Information
       <i class="fas fa-chevron-right fa-xs"></i>
     </a>
 
@@ -83,7 +81,28 @@
           </div>
           <div class="user-component__column">
             <div>
-              <span>Talk</span>
+              <a href="chat-1.html"><span>Talk</span></a>
+              <i class="fas fa-chevron-right fa-xs"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="user-component">
+          <div class="user-component__column">
+            <img
+              src="avatars/at3.png"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                Anna
+              </h4>
+              <h6 class="user-component__subtitle">Soldier</h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <div>
+              <a href="chat-2.html"><span>Talk</span></a>
               <i class="fas fa-chevron-right fa-xs"></i>
             </div>
           </div>
@@ -113,27 +132,6 @@
         <div class="user-component">
           <div class="user-component__column">
             <img
-              src="avatars/at3.png"
-              class="user-component__avatar user-component__avatar--sm"
-            />
-            <div class="user-component__text">
-              <h4 class="user-component__title user-component__title--not-bold">
-                Anna
-              </h4>
-              <h6 class="user-component__subtitle">Soldier</h6>
-            </div>
-          </div>
-          <div class="user-component__column">
-            <div>
-              <span>Talk</span>
-              <i class="fas fa-chevron-right fa-xs"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="user-component">
-          <div class="user-component__column">
-            <img
               src="avatars/at2.png"
               class="user-component__avatar user-component__avatar--sm"
             />
@@ -141,7 +139,7 @@
               <h4 class="user-component__title user-component__title--not-bold">
                 Teacher Kim
               </h4>
-              <h6 class="user-component__subtitle">Kimbab King</h6>
+              <h6 class="user-component__subtitle">gimbab King</h6>
             </div>
           </div>
           <div class="user-component__column">
@@ -212,5 +210,6 @@
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/alert.js"></script>
   </body>
 </html>

@@ -11,6 +11,7 @@
 }
 .screen-header__icons span {
   margin-left: 25px;
+  cursor: pointer;
 }
 
 .screen-header__icons .fa-cog:hover {
