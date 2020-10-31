@@ -145,6 +145,7 @@
 }
 .reply i {
   opacity: 0.5;
+  cursor: pointer;
 }
 .reply button i {
   opacity: 1;
