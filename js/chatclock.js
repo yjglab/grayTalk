@@ -1,5 +1,5 @@
 const clockContainer = document.querySelector(".js-clock"),
-    clockTitle = clockContainer.querySelector("h1");
+    clockTitle = clockContainer.querySelector(".chat__timestamp");
 
 
 function getTime() {
@@ -12,7 +12,9 @@ function getTime() {
     const today = date.getDate();
     const month = date.getMonth();
     
-    clockTitle.innerText = `${year}년 ${month+1}월 ${today}일 현재시각 ${hours < 10 ? `0${hours}` : hours}시 ${minutes < 10 ? `0${minutes}` : minutes}분 ${seconds < 10 ? `0${seconds}` : seconds}초`;
+    
+    clockTitle.innerText = `TODAY'S DATE - ${year}. ${month + 1}. ${today < 10 ? `0${today}` : today}`
+    
 }
 
 function init() {

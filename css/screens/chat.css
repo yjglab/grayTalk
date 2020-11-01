@@ -1,5 +1,5 @@
 #chat-screen {
-  background-color: #c7c7c7;
+  background-color: var(--main-chat-color);
   height: 100vh;
 }
 #chat-screen .status-bar {
@@ -12,7 +12,7 @@
   position: fixed;
   width: 100%;
   box-sizing: border-box;
-  background-color: #c7c7c7;
+  background-color: var(--main-chat-color);
 }
 #chat-screen .alt-header {
   top: 15px;
@@ -36,12 +36,13 @@
   }
 }
 .chat__timestamp {
-  color: white;
-  background-color: #a5a5a562;
+  color: rgb(255, 255, 255);
+  background-color: #838383;
   padding: 15px;
   font-size: 14px;
   border-radius: 25px;
   margin-bottom: 25px;
+  opacity: 0.5;
 }
 .message-row {
   width: 100%;
@@ -56,6 +57,7 @@
   box-shadow: 0px 3px 7px 2px #b8b8b8;
 }
 .message__author {
+  font-weight: 600;
   margin-bottom: 8px;
   display: block;
 }
@@ -86,11 +88,27 @@
   border-top-right-radius: 0px;
   border-top-left-radius: 15px;
   margin-right: 0px;
-  margin-left: 5px;
-  box-shadow: 0px 3px 7px 2px #b8b8b8;
+  margin-left: 4px;
+  box-shadow: 0px 3px 7px 2px #9e9e9e;
 }
 .message-row--own .message__info {
   flex-direction: row-reverse;
+}
+.message-btn {
+  color: #686868;
+  font-size: 23px;
+  font-weight: 800;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 365px;
+  right: -2px;
+  background-color: transparent;
+  border: none;
+  cursor: default;
+}
+.message-btn1 {
+  top: 292px;
 }
 
 .reply {
@@ -171,7 +189,7 @@
 
 .js-toDoList {
   position: absolute;
-  right: 24px;
+  right: 23px;
   top: 530px;
 }
 .js-toDoList button {
@@ -180,30 +198,22 @@
   font-weight: 800;
   height: 20px;
   width: 20px;
+  position: absolute;
+  right: -18px;
+
   background-color: transparent;
   border: none;
+  animation: Xbtn 0.5s linear forwards;
+  animation-delay: 3s;
 }
-/* .js-toDoList {
-  position: fixed;
-  right: 0px;
-  top: 0px;
+
+@keyframes Xbtn {
+  from {
+    opacity: 1;
+  }
+  to {
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+  }
 }
-.js-toDoList span {
-  padding: 10px 15px;
-  font-size: 18px;
-  border-radius: 15px;
-  border-top-left-radius: 0px;
-  margin-right: 5px;
-  box-shadow: 0px 3px 7px 2px #b8b8b8;
-  justify-content: flex-end;
-  background-color: #686868;
-  color: white;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 15px;
-  margin-right: 0px;
-  margin-left: 5px;
-  box-shadow: 0px 3px 7px 2px #b8b8b8;
-}
-.message-row--own .message__info {
-  flex-direction: row-reverse;
-} */

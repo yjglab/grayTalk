@@ -22,6 +22,7 @@ function saveToDos() {
 
 
 
+
 function paintToDo(text) {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
@@ -29,18 +30,24 @@ function paintToDo(text) {
     const div2 = document.createElement("div");
     const div3 = document.createElement("div");
     const span = document.createElement("span");
+    const span2 = document.createElement("span");
     const newId = toDos.length + 1;
+
+    const msgDate = new Date();
+    const msgMin = msgDate.getMinutes();
+    const msgHour = msgDate.getHours();
 
     const MSG_ROW = "message-row";
     const MSG_ROWOWN = "message-row--own";
     const MSG_ROW_CONTENT = "message-row__content";
     const MSG_INFO = "message__info";
     const MSG_BUBBLE = "message__bubble";
+    const MSG_NOW = "message__time";
 
     delBtn.innerText = "×";
     delBtn.addEventListener("click", deleteToDo);
     span.innerText = text;
-    // li.appendChild(delBtn);
+    li.appendChild(delBtn);
     li.appendChild(div1);
    
     div1.classList.add(MSG_ROW);
@@ -51,6 +58,10 @@ function paintToDo(text) {
     div3.classList.add(MSG_INFO);
     div3.appendChild(span);
     span.classList.add(MSG_BUBBLE);
+    div3.appendChild(span2);
+    span2.classList.add(MSG_NOW);
+    span2.innerText = `${msgHour < 10 ? `0${msgHour}` : msgHour}:${msgMin < 10 ? `0${msgMin}` : msgMin}`;
+    
     li.id = newId;
     toDoList.appendChild(li);
 
@@ -62,6 +73,8 @@ function paintToDo(text) {
     toDos.push(toDoobj);
     saveToDos();
 }
+
+
 function handleSubmit(event) {
     event.preventDefault();
     const currentValue = toDoInput.value;

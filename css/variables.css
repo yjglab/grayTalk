@@ -1,5 +1,6 @@
 :root {
   --yjgGreen: #494949;
+  --main-chat-color: rgb(221, 221, 221);
   --horizontal-space: 22px;
   --main-border: 1px solid rgba(0, 0, 0, 0.2);
   --subtext-color-01: rgba(0, 0, 0, 0.5);
