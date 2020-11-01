@@ -107,3 +107,7 @@
     transform: none;
   }
 }
+
+.today__clock {
+  display: flex;
+}
