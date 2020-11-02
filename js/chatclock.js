@@ -4,9 +4,7 @@ const clockContainer = document.querySelector(".js-clock"),
 
 function getTime() {
     const date = new Date();
-    const minutes = date.getMinutes();
-    const hours = date.getHours();
-    const seconds = date.getSeconds();
+
 
     const year = date.getFullYear();
     const today = date.getDate();

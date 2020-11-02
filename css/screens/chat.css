@@ -187,13 +187,13 @@
   transform: translateY(80px);
 }
 
-.js-toDoList {
+.js-replyList {
   position: absolute;
   right: 23px;
   top: 530px;
 }
-.js-toDoList button {
-  color: rgb(255, 103, 103);
+.js-replyList button {
+  color: #686868;
   font-size: 25px;
   font-weight: 800;
   height: 20px;

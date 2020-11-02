@@ -1,37 +1,37 @@
-const toDoForm = document.querySelector(".reply"),
-    toDoInput = document.querySelector("input"),
-    toDoList = document.querySelector(".js-toDoList");
+const replyForm = document.querySelector(".reply"),
+    replyInput = document.querySelector("input"),
+    replyList = document.querySelector(".js-replyList");
 
-const TODOS_LS = "toDos";
+const REPLY_LS = "toDos";
 
-let toDos = [];
+let replys = [];
 
-function deleteToDo(event) {
-    const btn = event.target;
-    const li = btn.parentNode;
-    toDoList.removeChild(li);
-    const cleanToDos = toDos.filter(function(toDo) {
-        return toDo.id !== parseInt(li.id);
+function deleteReply(event) {
+    const replybtn = event.target;
+    const replyli = replybtn.parentNode;
+    replyList.removeChild(replyli);
+    const cleanReplys = replys.filter(function(reply) {
+        return reply.id !== parseInt(replyli.id);
     });
-    toDos = cleanToDos;
-    saveToDos();
+    replys = cleanReplys;
+    saveReplys();
 } 
-function saveToDos() {
-    localStorage.setItem(TODOS_LS, JSON.stringify(toDos)); //object -> string
+function saveReplys() {
+    localStorage.setItem(REPLY_LS, JSON.stringify(replys)); //object -> string
 }
 
 
 
 
-function paintToDo(text) {
-    const li = document.createElement("li");
-    const delBtn = document.createElement("button");
+function paintReply(text) {
+    const replyli = document.createElement("li");
+    const replydelBtn = document.createElement("button");
     const div1 = document.createElement("div");
     const div2 = document.createElement("div");
     const div3 = document.createElement("div");
     const span = document.createElement("span");
     const span2 = document.createElement("span");
-    const newId = toDos.length + 1;
+    const newId = replys.length + 1;
 
     const msgDate = new Date();
     const msgMin = msgDate.getMinutes();
@@ -44,11 +44,11 @@ function paintToDo(text) {
     const MSG_BUBBLE = "message__bubble";
     const MSG_NOW = "message__time";
 
-    delBtn.innerText = "×";
-    delBtn.addEventListener("click", deleteToDo);
+    replydelBtn.innerText = "●";
+    replydelBtn.addEventListener("click", deleteReply);
     span.innerText = text;
-    li.appendChild(delBtn);
-    li.appendChild(div1);
+    replyli.appendChild(replydelBtn);
+    replyli.appendChild(div1);
    
     div1.classList.add(MSG_ROW);
     div1.classList.add(MSG_ROWOWN);
@@ -62,39 +62,39 @@ function paintToDo(text) {
     span2.classList.add(MSG_NOW);
     span2.innerText = `${msgHour < 10 ? `0${msgHour}` : msgHour}:${msgMin < 10 ? `0${msgMin}` : msgMin}`;
     
-    li.id = newId;
-    toDoList.appendChild(li);
+    replyli.id = newId;
+    replyList.appendChild(replyli);
 
-    const toDoobj = {
+    const replyobj = {
         text: text,
         id: newId
     };
 
-    toDos.push(toDoobj);
-    saveToDos();
+    replys.push(replyobj);
+    saveReplys();
 }
 
 
-function handleSubmit(event) {
+function replyhandleSubmit(event) {
     event.preventDefault();
-    const currentValue = toDoInput.value;
-    paintToDo(currentValue);
-    toDoInput.value = "";
+    const currentreplyValue = replyInput.value;
+    paintReply(currentreplyValue);
+    replyInput.value = "";
 }
-function loadToDos() {
-    const loadedToDos = localStorage.getItem(TODOS_LS);
-    if(loadedToDos !== null) {
-        const parsedToDos = JSON.parse(loadedToDos);
-        parsedToDos.forEach(function(toDo) {
-            paintToDo(toDo.text);
+function loadreplys() {
+    const loadedreply = localStorage.getItem(REPLY_LS);
+    if(loadedreply !== null) {
+        const parsedreply = JSON.parse(loadedreply);
+        parsedreply.forEach(function(reply) {
+            paintReply(reply.text);
         })
     } else {
 
     }
 }
 function init() {
-    loadToDos();
-    toDoForm.addEventListener("submit", handleSubmit)
+    loadreplys();
+    replyForm.addEventListener("submit", replyhandleSubmit)
     
 }
 init();

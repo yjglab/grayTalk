@@ -34,9 +34,10 @@
       </div>
     </header>
 
-    <main class="main-screen">
+    <main id="today-screen" class="main-screen">
       <div class="today__clock js-todayclock">
-        <h1>d</h1>
+        <h1>time</h1>
+        <span class="js-weather">weather</span>
       </div>
       <!-- <div class="icon-row">
         <div class="icon-row__icon">
@@ -56,9 +57,97 @@
           <span>grayMail</span>
         </div>
       </div> -->
-      <div class="recommended-friends">
-        <h6 class="recommended-friends__title">Recommended-Friends</h6>
-        <span>You have no recommended friends.</span>
+      <div class="memo">
+        <h6 class="memo__title">MEMO</h6>
+        <div class="memo__wrapper">
+          <canvas id="jsCanvas" class="canvas"></canvas>
+          <div class="controls">
+            <div class="controls__range">
+              <input
+                type="range"
+                id="jsRange"
+                min="0.1"
+                max="15.0"
+                value="5.0"
+                step="0.1"
+              />
+            </div>
+
+            <div class="controls__btns">
+              <button id="jsMode">Fill</button>
+              <button
+                class="jsErase controls__color jsColor"
+                style="background-color: white"
+              >
+                ERASE
+              </button>
+
+              <button id="jsSave">Save</button>
+            </div>
+            <div class="controls__colors" id="jsColors">
+              <div
+                class="controls__color jsColor"
+                style="background-color: #2c2c2c"
+                title=""
+              ></div>
+              <div
+                class="controls__color jsColor"
+                style="background-color: white"
+                title=""
+              ></div>
+              <div
+                class="controls__color jsColor"
+                style="background-color: #f6d258"
+                title=""
+              ></div>
+              <div
+                class="controls__color jsColor"
+                style="background-color: #eecdc4"
+                title=""
+              ></div>
+              <div
+                class="controls__color jsColor"
+                style="background-color: #d1af94"
+                title=""
+              ></div>
+              <div
+                class="controls__color jsColor"
+                style="background-color: #97d5e0"
+                title=""
+              ></div>
+              <div
+                class="controls__color jsColor"
+                style="background-color: #88b14b"
+                title=""
+              ></div>
+              <div
+                class="controls__color jsColor"
+                style="background-color: #ef562d"
+                title=""
+              ></div>
+              <div
+                class="controls__color jsColor"
+                style="background-color: #d13076"
+                title=""
+              ></div>
+              <div
+                class="controls__color jsColor"
+                style="background-color: #5587a2"
+                title=""
+              ></div>
+              <div
+                class="controls__color jsColor"
+                style="background-color: #5c7148"
+                title=""
+              ></div>
+              <div
+                class="controls__color jsColor"
+                style="background-color: #0c4c8a"
+                title=""
+              ></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="open-chat">
@@ -133,5 +222,7 @@
     ></script>
     <script src="js/alert.js"></script>
     <script src="js/todayclock.js"></script>
+    <script src="js/todayweather.js"></script>
+    <script src="js/memo.js"></script>
   </body>
 </html>

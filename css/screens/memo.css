@@ -1,0 +1,94 @@
+.memo {
+  height: 520px;
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+  padding: 25px 0px;
+  margin: 25px 0px;
+}
+.memo__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.memo__title {
+  font-size: 14px;
+  color: var(--subtext-color-01);
+  margin-bottom: 10px;
+}
+
+.canvas {
+  width: 433px;
+  height: 350px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.controls {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.controls .controls__btns {
+  margin-bottom: 20px;
+}
+.controls__btns button {
+  all: unset;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 0px;
+  width: 80px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: none;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 12px;
+}
+.controls__btns button:active {
+  transform: scale(0.98);
+}
+.controls .controls__colors {
+  display: flex;
+}
+.controls__colors .controls__color {
+  margin: 0px 0px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.controls .controls__range {
+  margin-bottom: 15px;
+}
+
+.ccmarks {
+  display: flex;
+  text-transform: uppercase;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.painter__title {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 75px 0px 3px 0px;
+}
+.ccmarks img {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 1px;
+}
+.ccmarks__text {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0px 8px;
+}
