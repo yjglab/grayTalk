@@ -13,6 +13,7 @@ function getTdTime() {
     const tdMonth = date.getMonth();
     
     tdClockTitle.innerText = `${tdYear}. ${tdMonth+1}. ${tdToday < 10 ? `0${tdToday}` : tdToday}. NOW ${tdHours < 10 ? `0${tdHours}` : tdHours} : ${tdMinutes < 10 ? `0${tdMinutes}` : tdMinutes} : ${tdSeconds < 10 ? `0${tdSeconds}` : tdSeconds}`;
+    
 }
 
 function init() {

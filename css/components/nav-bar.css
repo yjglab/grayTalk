@@ -21,7 +21,7 @@
   position: absolute;
   left: 15px;
   bottom: 15px;
-  animation: notificationAnim 3s ease-in-out infinite;
+  animation: notificationAnim 4s ease-in-out infinite;
 }
 .nav__dot {
   display: flex;
@@ -37,14 +37,11 @@
 @keyframes notificationAnim {
   0% {
     transform: none;
-    opacity: 0;
   }
   50% {
-    opacity: 1;
     transform: rotateY(360deg);
   }
   100% {
-    opacity: 0;
     transform: none;
   }
 }

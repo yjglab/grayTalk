@@ -9,7 +9,8 @@
 }
 .more-suggestions__title {
   color: var(--yjgGreen);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  opacity: 0.5;
 }
 .more-suggestions__icons {
   display: flex;
