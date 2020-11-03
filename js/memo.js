@@ -101,6 +101,15 @@ if(canvas) {
     canvas.addEventListener("click", handleCanvasClick);
     canvas.addEventListener("contextmenu", handleCM)
 }
+if(canvas) {
+    canvas.addEventListener("touchmove", onMouseMove);
+    canvas.addEventListener("touchstart", startPainting);
+    canvas.addEventListener("touchend", stopPainting); 
+    canvas.addEventListener("touchcancel", stopPainting);
+    canvas.addEventListener("click", handleCanvasClick);
+    canvas.addEventListener("contextmenu", handleCM)
+}
+
 if(colors) {
     Array.from(colors).forEach(c => 
         c.addEventListener("click", handleColorClick)
