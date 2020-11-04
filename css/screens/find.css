@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   color: var(--subtext-color-01);
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .open-chat__header span {
   opacity: 0.6;
@@ -71,9 +71,7 @@
 
 .open-post__heart-count:hover i {
   will-change: transform;
-  /* will-change -> 브라우저에게 변화가 일어날 요소(ex. transform)를 
-  미리 알려두어 오류를 발생시키지 않도록 하는 기능 - 그래픽카드를 이용해
-  애니메이션 기능을 강화함. */
+
   animation: heartBeat 1s linear infinite;
 }
 @keyframes heartBeat {
@@ -91,9 +89,6 @@
   }
 }
 
-#today-screen {
-  height: 110%;
-}
 .today__clock {
   display: flex;
 }

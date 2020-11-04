@@ -8,6 +8,9 @@
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   color: var(--yjgGreen);
 }
+.nav i {
+  font-size: 22px;
+}
 .nav__list {
   display: flex;
   justify-content: space-between;
@@ -29,9 +32,9 @@
   width: 6px;
   height: 6px;
   border-radius: 15px;
-  background-color: tomato;
-  left: 30px;
-  bottom: 30px;
+  background-color: rgb(170, 170, 170);
+  left: 25px;
+  bottom: 20px;
 }
 
 @keyframes notificationAnim {

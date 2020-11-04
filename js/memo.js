@@ -14,7 +14,7 @@ const INITIAL_COLOR = "#2c2c2c"
 const CANVAS_SIZE = 700;
 
 canvas.width = 433;
-canvas.height = 350;
+canvas.height = 300;
 
 
 ctx.fillStyle = "white";
